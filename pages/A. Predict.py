@@ -114,7 +114,7 @@ def predict_risk(models, features):
 st.title("Traffic Accident Risk Prediction")
 
 st.write("## 1. Choose Your Model")
-model_options = st.multiselect("#### Please select the models for prediction:", ["Random Forest", "XGBoost", "AdaBoost"])
+model_options = st.multiselect("#### Please select the models for prediction:", ["Random_Forest", "XGBoost", "AdaBoost"])
 models = load_models(model_options)
 
 st.write("## 2. Choose Your Inputs")
@@ -125,5 +125,5 @@ if st.button('Predict Risk'):
     predictions = predict_risk(models, features)
     for model_name, prediction in predictions.items():
         st.write(f"Results for {model_name}: {prediction}")
-    st.image("media/end.gif", use_column_width=True)  # width align with the page
+    st.image("media/end.gif")
 
